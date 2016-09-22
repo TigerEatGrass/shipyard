@@ -1,0 +1,21 @@
+{
+  "name": "shipyard",
+  "description": "auto-workflow for dumi-fe",
+  "main": "gulpfile.js",
+  "authors": [
+    "dreamcatcher"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/TigerEatGrass/shipyard",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "lodash": "^4.16.1"
+  }
+}
