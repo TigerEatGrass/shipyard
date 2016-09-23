@@ -12,7 +12,13 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	del = require('del'),
 	rename = require('gulp-rename'),
-	pump = require('pump');
+	pump = require('pump'),
+	gutil = require('gulp-util');
+
+
+var basePath = __dirname.replace('shipyard', '');
+var tips = "😘   😘   😘   😘   😘   😘   😘   ";
+gutil.log(tips + basePath.replace('shipyard', ''));
 
 // /////////////////////////////////////////////////////////
 // Scripts Task
@@ -34,37 +40,27 @@ gulp.task('scripts', function (cb) {
 	);
 });
 
-gulp.task('lib', function (cb) {
-	var options = {
-    	compress: false,
-    	mangle: false
-  	};
- 
-	pump([
-	    gulp.src('js/lib/*.js'),
-	    uglify(options),
-	    gulp.dest('../js/lib'),
-	    reload({stream: true})
-	],
-	cb
-	);
-});
-
 // /////////////////////////////////////////////////////////
 // Compass / Sass Tasks
 // /////////////////////////////////////////////////////////
 
 gulp.task('compass', function () {
-	gulp.src('sass/*.scss')
+	var sassPath = 'shipyard/js/app',
+		cssPath = 'assets/js/app';
+	gulp.src(basePath + sassPath + '/**/**/sass/*.scss')
 		.pipe(plumber())
 		.pipe(compass({
 			config_file: 'config.rb',
-			css: '../css',
-			sass: 'sass',
-			require: ['susy']
+			sass: basePath + sassPath + '/**/**/',
+			css: basePath + cssPath + '/**/**/',
+			require: ['susy', 'breakpoint']
 		}))
+		.on('error', function(error) {
+	      console.log(basePath + sassPath + '/**/**/');
+	      this.emit('end');
+	    })
 		.pipe(autoprefixer('last 2 versions'))
-		.pipe(gulp.dest('../css'))
+		.pipe(gulp.dest(basePath + cssPath))
 		.pipe(reload({stream: true}));
 });
 
@@ -104,4 +100,4 @@ gulp.task('watch', function () {
 // Default Task
 // /////////////////////////////////////////////////////////
 
-gulp.task('default', ['compass', 'html', 'scripts', 'lib', 'browser-sync', 'watch']);
+gulp.task('default', ['compass', 'html', 'scripts', 'browser-sync', 'watch']);
