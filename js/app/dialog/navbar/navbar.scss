@@ -1,0 +1,148 @@
+.dl-nav-wrapper{
+	margin: 0px auto;
+	width: 1300px;
+	height: 100px;
+}
+
+.dl-nav-left, .dl-nav-center{
+	width: 400px;
+	height: 100px;
+	float: left;
+}
+
+.dl-nav-right{
+	width: 180px;
+	height: 100px;
+	float: left;
+	margin-left: 30px;
+}
+
+.dl-nav-tips, .dl-nav-query-left{
+	height: 44px;
+}
+
+.dl-nav-tips{
+	padding-left: 14px;
+}
+
+.dl-nav-query-left{
+	padding: 4px 4px;
+}
+
+.dl-nav-tips span{
+	line-height: 44px;
+	font-size: 12px;
+}
+
+.dl-nav-tips #navUserId{
+	font-size: 14px;
+	color: #176ca9;
+	vertical-align: bottom;
+}
+
+#dl-nav-datetime{
+	width: 280px;
+	height: 24px;
+	margin-top: 4px;
+}
+
+.dl-nav-input{
+	width: 268px;
+	height: 24px;
+	margin-left: -4px;
+	padding-right: 6px;
+	border: none;
+}
+
+.dl-nav-input-dt{
+	width: 314px;
+	height: 24px;
+	margin-left: -4px;
+	padding-right: 6px;
+	border: none;
+}
+
+.dl-nav-multi-top{
+	height: 34px;
+	padding-top: 4px;
+	padding-left: 10px;
+}
+
+#btn-userid, #btn-logid, #btn-query{
+	height: 24px;
+	widows: 60px;
+	font-size: 12px;
+	padding-top: 3px;
+}
+
+.nav-btn{
+	height: 24px;
+	width: 68px;
+	font-size: 12px;
+	padding-top: 3px;
+	margin-left: -4px;
+	border: none;
+}
+
+.dl-nav-multi-content{
+	padding-top: 0px;
+	height: 60px;
+	position: relative;
+	overflow: hidden;
+}
+
+#dl-nav-query-userid, #dl-nav-query-logid, #dl-nav-query-query{
+	height: 60px;
+}
+
+#dl-nav-query-logid, #dl-nav-query-query{
+	padding-top: 14px;
+}
+
+.dl-nav-btn-input{
+	width: 380px;
+	height: 30px;
+	padding-left: 10px;
+}
+
+.dl-nav-btn-input-left{
+	float: left;
+	width: 60px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.dl-nav-btn-input-right{
+	float: left;
+	width: 260px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	border-left: 0px;
+	border-radius: 1px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.dl-nav-btn-input-right-dt{
+	float: left;
+	width: 310px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	border-left: 0px;
+	border-radius: 1px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+.dl-nav-right-bottom button{
+	width: 136px;
+}
+
+.dl-nav-center{
+ 	margin-left: 110px;
+}
+
+
+

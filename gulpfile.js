@@ -22,7 +22,7 @@ var project = __dirname.replace('shipyard', ''), // your project path
 	destination = 'assets/js/app', // your building path
 	proxyAddr = 'cp01-rdqa04-dev117.cp01.baidu.com:8024', // your proxy address
 	hostAddr = 'cp01-rdqa04-dev117.cp01.baidu.com', // host addr which browser could access
-	hostPort = 8214,
+	hostPort = 8124,
     tips = '😘   😘   😘   😘   😘   😘   😘   '; // gutil prompts
 
 gutil.log(tips + project);
@@ -52,7 +52,7 @@ gulp.task('scripts', function (cb) {
 // /////////////////////////////////////////////////////////
 
 gulp.task('compass', function () {
-	gulp.src(project + shipyard + '/**/**/sass/*.scss')
+	gulp.src(project + shipyard + '/**/**/sass/*.scss') // without sass dir, compilation failed
 		.pipe(plumber())
 		.pipe(compass({
 			config_file: 'config.rb',
@@ -65,6 +65,14 @@ gulp.task('compass', function () {
 	      	this.emit('end');
 	    })
 		.pipe(autoprefixer('last 2 versions'))
+		.pipe(gulp.dest(project + destination))
+		.pipe(reload({stream: true}));
+});
+
+// task for refresh css file, cause compass task unsuccussfully reload the steam
+gulp.task('reloadcss', function () {
+	gulp.src(project + destination + '/**/**/*.css')
+		.pipe(plumber())
 		.pipe(gulp.dest(project + destination))
 		.pipe(reload({stream: true}));
 });
@@ -96,7 +104,8 @@ gulp.task('browser-sync', function () {
 
 gulp.task('watch', function () {
 	gulp.watch(project + shipyard + '/**/**/*.js', ['scripts']);
-	gulp.watch(project + shipyard + '/**/**/sass/*.scss', ['compass']);
+	gulp.watch(project + shipyard + '/**/**/*.scss', ['compass']);
+	gulp.watch(project + destination + '/**/**/*.css', ['reloadcss']);
 	gulp.watch(project + shipyard + '/**/**/*.html', ['html']);
 });
 
@@ -104,4 +113,4 @@ gulp.task('watch', function () {
 // Default Task
 // /////////////////////////////////////////////////////////
 
-gulp.task('default', ['compass', 'html', 'scripts', 'browser-sync', 'watch']);
+gulp.task('default', ['compass', 'html', 'scripts', 'browser-sync', 'reloadcss', 'watch']);

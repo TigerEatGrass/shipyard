@@ -1,0 +1,60 @@
+.dl-trace-log-header{
+	width: 100%;
+	height: 40px;
+	color: #333;
+	padding-top: 8px;
+	border-bottom: 1px solid #ccc;
+	margin-top: 10px;
+}
+
+.dl-trace-log-header h4{
+	text-align: center;
+}
+
+.dl-trace-log-body{
+	padding-top: 30px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #111;
+    display: none;
+}
+
+#dl-json-view{
+        border: 1px solid #bbb;
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 800px;
+        height: 600px;
+        background-color: #fff;
+        z-index: 200;
+        overflow-x: hidden;
+        overflow-y: scroll;
+}
+
+#dl-json-view h4{
+        border-bottom: 1px solid #fff;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #f7f8f9;
+}
+
+#dl-json-view .dl-json-inner{
+        padding: 20px 30px;
+}
+
+#dl-json-view .dl-json-inner span.string{
+        width: 100%;
+    word-break: break-all;
+    text-indent: 20px;
+}

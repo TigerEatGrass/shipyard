@@ -1,0 +1,112 @@
+@media (min-width: 1200px) {
+	.dl-container{
+		width: 100%;
+		height: 900px;
+		overflow: hidden;
+	}
+
+	#dl-nav-bar{
+		width: 100%;
+		height: 100px;
+		background-color: #f9f9f9;
+	}
+
+	.dl-content{
+		width: 100%;
+		height: 900px;
+		margin: 10px auto;
+		padding: 0 10px;
+	}
+
+	.dl-content-wrapper{
+		width: 1300px;
+		height: 750px;
+		margin: 0 auto;
+	}
+
+	#dialog{
+		float: left;
+	    width: 310px;
+	    height: 740px;
+	    margin-left: 20px;
+	    border: 1px solid #ccc;
+	    overflow: hidden;
+	    box-shadow: 0px 1px 4px 1px #ccc;
+	    background-color: #f9f9f9;
+	}
+
+	#conclusion{
+		float: left;
+		width: 300px;
+	    height: 740px;
+	    margin-left: 16px;
+	    border: 1px solid #ccc;
+	    box-shadow: 0px 1px 4px 1px #ccc;
+	    overflow: hidden;
+	    background-color: #f9f9f9;
+	}
+
+	#tracelog{
+		float: left;
+	    width: 620px;
+	    height: 740px;
+	    margin-left: 16px;
+	    border: 1px solid #ccc;
+	    box-shadow: 0px 1px 4px 1px #ccc;
+	    background-color: #f9f9f9;
+	}
+}
+
+@media (max-width: 1200px) {
+	.dl-container{
+		width: 100%;
+		height: 900px;
+		padding-bottom: 150px;
+		margin-bottom: -10px;
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+
+	#dl-nav-bar{
+		width: 1340px;
+		height: 100px;
+		background-color: #f9f9f9;
+	}
+	.dl-content{
+		width: 1320px;
+		height: 900px;
+		margin: 10px auto;
+	}
+	
+	#dialog{
+		float: left;
+	    width: 310px;
+	    height: 740px;
+	    margin-left: 20px;
+	    border: 1px solid #ccc;
+	    overflow: hidden;
+	    box-shadow: 0px 1px 4px 1px #ccc;
+	    background-color: #f9f9f9;
+	}
+
+	#conclusion{
+		float: left;
+		width: 300px;
+	    height: 740px;
+	    margin-left: 16px;
+	    border: 1px solid #ccc;
+	    box-shadow: 0px 1px 4px 1px #ccc;
+	    overflow: hidden;
+	    background-color: #f9f9f9;
+	}
+
+	#tracelog{
+		float: left;
+	    width: 620px;
+	    height: 740px;
+	    margin-left: 16px;
+	    border: 1px solid #ccc;
+	    box-shadow: 0px 1px 4px 1px #ccc;
+	    background-color: #f9f9f9;
+	}
+}
